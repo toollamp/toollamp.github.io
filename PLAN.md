@@ -272,7 +272,8 @@ Adrian 2026-10-22 提出：也想藉這個網站學 AI 的使用方式，例如�
 - [ ] 到智慧財產局和美國 USPTO 查 ToolLamp 有沒有人註冊商標
 - [x] 到 Google Search Console 驗證網站並提交 `https://toollamp.github.io/sitemap.xml`：2026-10-20 完成，驗證檔 `google93ec6f7db77f90e7.html` 要一直留著。
 - [x] 在 Search Console 用「網址審查」→「要求建立索引」送出中英文首頁：2026-10-20 送出 `/zh-tw/` 和 `/en/`。當時兩頁都顯示「Google 無法辨識的網址」，sitemap 也還沒被讀取過。工具頁先不送，讓 Google 從首頁的連結找到。
-- [ ] 在 Search Console 用「網址審查」查 `https://toollamp.github.io/en/`，看「Google 選擇的標準網址」是不是 `https://toollamp.github.io/`，告訴 AI
+- [x] 在 Search Console 用「網址審查」查 `https://toollamp.github.io/en/`：2026-10-26 確認宣告的標準網址是 `/en/`，Google 選的是 `/`，和推論一致。
+- [ ] 到 Search Console 的「Sitemap」看 `sitemap.xml` 的狀態，截圖給 AI（`/en/` 的網址審查顯示「未偵測到任何參照 Sitemap」，前一天顯示「暫時性處理錯誤」）
 - [ ] 一週後用 `site:toollamp.github.io` 確認中英文首頁和工具頁有沒有被收錄；如果工具頁還是沒有，再送幾個主要工具頁。
 - [x] 用無痕視窗打開任一個工具頁的「填寫意見回饋」，送出一筆測試：2026-10-21 完成，新回應的 email 通知已開啟，測試有收到通知。
 - [x] 申請蝦皮分潤計畫：2026-10-22 核准，用網站申請。
@@ -338,4 +339,4 @@ Adrian 2026-10-22 提出：也想藉這個網站學 AI 的使用方式，例如�
 - 2026-10-22：收益來源先維持兩種：蝦皮分潤（中文頁推薦商品，已上線）和 AdSense（審查中）。AliExpress、Amazon 先不申請，等英文頁有流量再說（Adrian 決定）。接下來的重點放在工具和內容，以及觀察兩種收入的報表。
 - 2026-10-22：進位轉換放在 electronics 分類「微控制器」組。位元數預設「自動」（無號、最多 64 位元），避免一般使用者輸入 1000 就被 8 位元的範圍擋住；選了位元數才接受負數，十六進位和二進位一律當成位元樣式。文字一律用 UTF-8 編碼（ASCII 是它的子集）。
 - 2026-10-22：Adrian 確認進位轉換的名稱（進位轉換）和網址（`number-base-converter`），從 `claude/dreamy-edison-l4s8qp` 合併到 `main` 發布。文字只支援 UTF-8，Big5 等有需要再加。
-- 2026-10-25：Search Console 回報 1 頁「重複網頁；Google 選擇的標準網頁和使用者的選擇不同」（首次偵測 10-20），Adrian 確認是 `/en/`（原本猜是 `/`，猜錯）。原因：Googlebot 用英文、非台灣時區打開根目錄 `/`，`site.js` 用 `location.replace` 轉到 `/en/`，所以 Google 看到的 `/` 和 `/en/` 內容一樣，把兩者合併，選了較短的 `/` 當標準網址，`/en/` 就不另外收錄。影響小：搜尋結果會顯示 `/`，點進去仍依讀者語言轉到中文或英文首頁；`/zh-tw/` 和工具頁不受影響。先不改，等 Adrian 決定要不要讓根目錄不再自動轉址。
+- 2026-10-25：Search Console 回報 1 頁「重複網頁；Google 選擇的標準網頁和使用者的選擇不同」（首次偵測 10-20），Adrian 確認是 `/en/`（原本猜是 `/`，猜錯）。原因：Googlebot 用英文、非台灣時區打開根目錄 `/`，`site.js` 用 `location.replace` 轉到 `/en/`，所以 Google 看到的 `/` 和 `/en/` 內容一樣，把兩者合併，選了較短的 `/` 當標準網址，`/en/` 就不另外收錄。2026-10-26 Adrian 用網址審查確認 Google 選的標準網址是 `/`。影響小：搜尋結果會顯示 `/`，點進去仍依讀者語言轉到中文或英文首頁；`/zh-tw/` 和工具頁不受影響。先不改，等 Adrian 決定要不要讓根目錄不再自動轉址。
