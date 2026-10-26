@@ -266,6 +266,8 @@ Adrian 2026-10-22 提出：也想藉這個網站學 AI 的使用方式，例如�
 
 這些需要本人帳號或個人資料，AI 不能代勞。AI 可以提醒，但不要假設已經完成。
 
+**請 Adrian 做 Search Console 或其他後台操作之前，先看這一段有沒有做過。** Adrian 做完的每一個操作（包括在其他 session 或用其他 AI 做的）都要記在這裡，寫日期和結果，避免重複請他做同一件事。
+
 - [x] 把 GitHub 組織 `toolburrow` 改名為 `toollamp`（組織 Settings → Change organization name）：已完成。
 - [x] 把 repo `toolburrow.github.io` 改名為 `toollamp.github.io`（repo Settings → Repository name），確認網站在 `https://toollamp.github.io/` 能打開：已完成，13 頁都能正常開啟，舊網址已失效。
 - [ ] 有流量再買 `toollamp.com`（Adrian 2026-10-20 決定先不買；.com 一年約 US$10～15）
@@ -275,7 +277,7 @@ Adrian 2026-10-22 提出：也想藉這個網站學 AI 的使用方式，例如�
 - [x] 在 Search Console 用「網址審查」查 `https://toollamp.github.io/en/`：2026-10-26 確認宣告的標準網址是 `/en/`，Google 選的是 `/`，和推論一致。
 - [x] 到 Search Console 的「Sitemap」看 `sitemap.xml` 的狀態：2026-10-26 顯示「無法讀取 Sitemap」，上次讀取 10-22，找到 0 頁。AI 檢查過檔案沒有問題（XML 格式正確、51 個網址都回應 200、robots.txt 有指向 sitemap、線上版回應 200 和 `application/xml`），應該是 Search Console 對新網站常見的讀取失敗。
 - [x] sitemap 提交紀錄（之前沒記到這裡）：2026-10-20 第一次提交，2026-10-22 移除後重新提交，兩次都「無法讀取」。不再重複移除、重新提交。
-- [ ] 用「網址審查」查 `https://toollamp.github.io/sitemap.xml`，按「測試線上網址」，看 Googlebot 能不能抓到檔案，截圖給 AI。抓得到就等 Google 自己重試（新網站常要等幾週）；抓不到 AI 再查原因
+- [x] 用「網址審查」的「測試線上網址」查 `sitemap.xml`：之前已經做過一次（沒記到這裡），2026-10-26 又做一次，結果是「Google 可為網址建立索引」，Googlebot 抓得到檔案。sitemap 檔案和網站都沒問題，只是 Sitemap 報表還沒更新。結論：不用再做任何事，等 Google 自己重試。
 - [ ] 一週後用 `site:toollamp.github.io` 確認中英文首頁和工具頁有沒有被收錄；如果工具頁還是沒有，再送幾個主要工具頁。
 - [x] 用無痕視窗打開任一個工具頁的「填寫意見回饋」，送出一筆測試：2026-10-21 完成，新回應的 email 通知已開啟，測試有收到通知。
 - [x] 申請蝦皮分潤計畫：2026-10-22 核准，用網站申請。
