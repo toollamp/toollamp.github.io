@@ -273,7 +273,8 @@ Adrian 2026-10-22 提出：也想藉這個網站學 AI 的使用方式，例如�
 - [x] 到 Google Search Console 驗證網站並提交 `https://toollamp.github.io/sitemap.xml`：2026-10-20 完成，驗證檔 `google93ec6f7db77f90e7.html` 要一直留著。
 - [x] 在 Search Console 用「網址審查」→「要求建立索引」送出中英文首頁：2026-10-20 送出 `/zh-tw/` 和 `/en/`。當時兩頁都顯示「Google 無法辨識的網址」，sitemap 也還沒被讀取過。工具頁先不送，讓 Google 從首頁的連結找到。
 - [x] 在 Search Console 用「網址審查」查 `https://toollamp.github.io/en/`：2026-10-26 確認宣告的標準網址是 `/en/`，Google 選的是 `/`，和推論一致。
-- [ ] 到 Search Console 的「Sitemap」看 `sitemap.xml` 的狀態，截圖給 AI（`/en/` 的網址審查顯示「未偵測到任何參照 Sitemap」，前一天顯示「暫時性處理錯誤」）
+- [x] 到 Search Console 的「Sitemap」看 `sitemap.xml` 的狀態：2026-10-26 顯示「無法讀取 Sitemap」，上次讀取 10-22，找到 0 頁。AI 檢查過檔案沒有問題（XML 格式正確、51 個網址都回應 200、robots.txt 有指向 sitemap、線上版回應 200 和 `application/xml`），應該是 Search Console 對新網站常見的讀取失敗。
+- [ ] 在 Search Console 的「Sitemap」重新提交：先刪除舊的 `sitemap.xml`，再新增 `sitemap.xml?v=2`（加參數讓 Google 當成新的 sitemap 重新讀取）。過幾天回來看狀態有沒有變成「成功」，還是失敗就告訴 AI
 - [ ] 一週後用 `site:toollamp.github.io` 確認中英文首頁和工具頁有沒有被收錄；如果工具頁還是沒有，再送幾個主要工具頁。
 - [x] 用無痕視窗打開任一個工具頁的「填寫意見回饋」，送出一筆測試：2026-10-21 完成，新回應的 email 通知已開啟，測試有收到通知。
 - [x] 申請蝦皮分潤計畫：2026-10-22 核准，用網站申請。
